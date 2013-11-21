@@ -13,6 +13,13 @@
 			<td><%= link_to 'Show', post %></td>
 			<td><%= link_to 'Edit', edit_post_path(post) %></td>
 			<td><%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td class='votes-count'><%= post.votes_total %></td>
+			<td><%= button_to '⬆', post_votes_path(post, direction: 'up') %></td>
+			<td><%= button_to '⬇', post_votes_path(post, direction: 'down') %></td>
 		</tr>
+		
+	
+	
 	<% end %>
+
 </table>	

@@ -1,6 +1,9 @@
 Blog::Application.routes.draw do
+  resources :votes
+
   resources :posts do
     resources :comments
+    resource :votes
   end
   root to: "welcome#index"
 
